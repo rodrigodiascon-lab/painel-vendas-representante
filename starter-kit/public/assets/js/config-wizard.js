@@ -243,7 +243,7 @@ function renderSource(body) {
     ]),
     el('label', { class: 'field' }, [
       el('span', { class: 'lbl', text: 'gid da aba (opcional)' }),
-      el('input', { class: 'input', id: 'sheetGid', type: 'text', placeholder: '0' }),
+      el('input', { class: 'input', id: 'sheetGid', type: 'text', inputmode: 'numeric', placeholder: 'vazio = a aba que está no link' }),
     ]),
     el('button', { class: 'btn', type: 'button', id: 'connectSheet', text: 'Conectar planilha' }),
   ]);

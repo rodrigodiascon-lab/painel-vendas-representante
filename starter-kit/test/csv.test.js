@@ -158,3 +158,25 @@ test('sheetUrlToCsv: gid default 0 quando não informado', () => {
 test('sheetUrlToCsv: link inválido lança Error', () => {
   assert.throws(() => sheetUrlToCsv('https://exemplo.com/planilha'), /planilha|inválido|link/i);
 });
+
+test('sheetUrlToCsv: sem gid informado, usa a aba do link (#gid=)', () => {
+  const url = 'https://docs.google.com/spreadsheets/d/ABC123/edit#gid=987654321';
+  assert.equal(sheetUrlToCsv(url), 'https://docs.google.com/spreadsheets/d/ABC123/gviz/tq?tqx=out:csv&gid=987654321');
+  assert.equal(sheetUrlToCsv(url, '0'), 'https://docs.google.com/spreadsheets/d/ABC123/gviz/tq?tqx=out:csv&gid=987654321');
+});
+
+test('sheetUrlToCsv: aba do link também em ?gid= e &gid=', () => {
+  assert.match(sheetUrlToCsv('https://docs.google.com/spreadsheets/d/ABC123/edit?gid=55#gid=55'), /&gid=55$/);
+  assert.match(sheetUrlToCsv('https://docs.google.com/spreadsheets/d/ABC123/edit?usp=sharing&gid=7'), /&gid=7$/);
+});
+
+test('sheetUrlToCsv: gid informado (diferente de 0) prevalece sobre o do link', () => {
+  const url = 'https://docs.google.com/spreadsheets/d/ABC123/edit#gid=111';
+  assert.match(sheetUrlToCsv(url, '222'), /&gid=222$/);
+});
+
+test('sheetUrlToCsv: gid que não é número é recusado (não injeta parâmetro na URL)', () => {
+  const url = 'https://docs.google.com/spreadsheets/d/ABC123/edit';
+  assert.throws(() => sheetUrlToCsv(url, '0&tq=select'), /aba|gid/i);
+  assert.match(sheetUrlToCsv('https://docs.google.com/spreadsheets/d/ABC123/edit#gid=12abc'), /&gid=0$/);
+});
