@@ -90,6 +90,11 @@ Explique e deixe a pessoa escolher (detalhe na seção "Os dois modos de dados")
 - HISTÓRICO: Worker cron tira snapshots no D1; dá histórico de verdade e não depende da fonte no ar. Mais setup.
 
 ### 4. Provisionar a infra DELA
+ANTES de tudo, copie o `starter-kit/` para uma pasta de projeto da pessoa, fora da pasta da skill (ex:
+`~/Documents/paineis/<nome-do-painel>/`), e trabalhe SÓ nessa cópia. Nunca edite o `starter-kit/` dentro de
+`~/.claude/skills/painel-vendas/`: isso mistura o painel da pessoa com a skill e quebra o `git pull` que
+atualiza a skill. Todos os comandos de `references/infra.md` rodam na cópia.
+
 Pergunte qual conta Cloudflare usar e siga `references/infra.md` na ordem (o passo do wrangler.toml é
 BLOQUEANTE: rode `python3 scripts/preflight.py --starter-kit starter-kit` antes do deploy):
 - KV `DASHBOARDS_KV` (sempre) e `DASHBOARD_CACHE` (opcional).

@@ -2,7 +2,9 @@
 
 Pergunte SEMPRE qual conta Cloudflare antes de operar. Confirme com `wrangler whoami`.
 Não há passo de build: o `wrangler.toml` já tem `pages_build_output_dir = "public"`, então os comandos
-usam a pasta `public/` direto. Todos os comandos abaixo rodam a partir da pasta `starter-kit/` (é onde
+usam a pasta `public/` direto. Primeiro copie o `starter-kit/` para uma pasta de projeto da pessoa, fora da
+pasta da skill (ex: `cp -R ~/.claude/skills/painel-vendas/starter-kit ~/Documents/paineis/<NOME-DO-PROJETO>`);
+nunca edite a cópia que fica dentro da skill. Todos os comandos abaixo rodam a partir dessa cópia do `starter-kit/` (é onde
 mora o `wrangler.toml`, o `db/schema.sql` e o `package.json`).
 
 Antes de começar, rode o preflight (checa Node, wrangler, login, placeholders e token de ambiente):
