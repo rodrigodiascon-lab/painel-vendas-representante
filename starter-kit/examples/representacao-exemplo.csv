@@ -1,0 +1,73 @@
+Data,Cliente,Representada,Linha,Valor,Status
+01/08/2026,Loja Exemplo Vila Nova,Marca Gama,Assadeiras,"430,00",Faturado
+02/08/2026,Loja Exemplo Shopping,Marca Alfa,Facas,"450,00",Faturado
+03/08/2026,Loja Exemplo Centro,Marca Alfa,Panelas,"780,00",Pedido
+04/08/2026,Loja Exemplo Vila Nova,Marca Alfa,Facas,"3.290,00",Pedido
+06/08/2026,Loja Exemplo Shopping,Marca Gama,Utensílios,"380,00",Faturado
+07/08/2026,Loja Exemplo Norte,Marca Beta,Copos,"830,00",Faturado
+08/08/2026,Loja Exemplo Praça,Marca Beta,Copos,"1.200,00",Cancelado
+09/08/2026,Loja Exemplo Shopping,Marca Alfa,Facas,"1.720,00",Faturado
+11/08/2026,Loja Exemplo Vila Nova,Marca Gama,Utensílios,"3.250,00",Orçamento
+12/08/2026,Loja Exemplo Praça,Marca Alfa,Panelas,"3.200,00",Faturado
+13/08/2026,Loja Exemplo Rio Verde,Marca Alfa,Panelas,"1.430,00",Cotação
+14/08/2026,Loja Exemplo Vila Nova,Marca Beta,Copos,"1.200,00",Cotação
+16/08/2026,Loja Exemplo Vila Nova,Marca Beta,Copos,"2.650,00",Faturado
+17/08/2026,Loja Exemplo Avenida,Marca Beta,Potes,"940,00",Cancelado
+18/08/2026,Loja Exemplo Shopping,Marca Alfa,Panelas,"430,00",Faturado
+19/08/2026,Loja Exemplo Vila Nova,Marca Alfa,Panelas,"2.700,00",Cotação
+21/08/2026,Loja Exemplo Sul,Marca Beta,Potes,"3.290,00",Faturado
+22/08/2026,Loja Exemplo Shopping,Marca Alfa,Panelas,"2.150,00",Cotação
+23/08/2026,Loja Exemplo Rio Verde,Marca Beta,Potes,"780,00",Faturado
+25/08/2026,Loja Exemplo Shopping,Marca Alfa,Panelas,"620,00",Cotação
+26/08/2026,Loja Exemplo Praça,Marca Alfa,Talheres,"1.470,00",Pedido
+27/08/2026,Loja Exemplo Avenida,Marca Alfa,Facas,"500,00",Faturado
+28/08/2026,Loja Exemplo Centro,Marca Beta,Potes,"710,00",Orçamento
+30/08/2026,Loja Exemplo Norte,Marca Gama,Utensílios,"2.100,00",Cotação
+31/08/2026,Loja Exemplo Sul,Marca Beta,Copos,"670,00",Pedido
+01/09/2026,Loja Exemplo Rio Verde,Marca Gama,Assadeiras,"2.700,00",Faturado
+02/09/2026,Loja Exemplo Centro,Marca Alfa,Talheres,"940,00",Faturado
+04/09/2026,Loja Exemplo Norte,Marca Gama,Assadeiras,"540,00",Cancelado
+05/09/2026,Loja Exemplo Sul,Marca Gama,Assadeiras,"710,00",Faturado
+06/09/2026,Loja Exemplo Praça,Marca Gama,Utensílios,"780,00",Faturado
+07/09/2026,Loja Exemplo Norte,Marca Gama,Utensílios,"1.810,00",Faturado
+09/09/2026,Loja Exemplo Vila Nova,Marca Alfa,Panelas,"1.150,00",Cotação
+10/09/2026,Loja Exemplo Vila Nova,Marca Alfa,Panelas,"450,00",Faturado
+11/09/2026,Loja Exemplo Praça,Marca Alfa,Talheres,"450,00",Cotação
+12/09/2026,Loja Exemplo Rio Verde,Marca Beta,Copos,"2.100,00",Faturado
+14/09/2026,Loja Exemplo Norte,Marca Beta,Potes,"780,00",Cotação
+15/09/2026,Loja Exemplo Rio Verde,Marca Beta,Potes,"1.470,00",Orçamento
+16/09/2026,Loja Exemplo Centro,Marca Alfa,Facas,"3.200,00",Faturado
+18/09/2026,Loja Exemplo Vila Nova,Marca Gama,Utensílios,"450,00",Faturado
+19/09/2026,Loja Exemplo Sul,Marca Gama,Utensílios,"710,00",Faturado
+20/09/2026,Loja Exemplo Norte,Marca Beta,Copos,"540,00",Faturado
+21/09/2026,Loja Exemplo Sul,Marca Gama,Assadeiras,"450,00",Faturado
+23/09/2026,Loja Exemplo Centro,Marca Beta,Potes,"870,00",Faturado
+24/09/2026,Loja Exemplo Rio Verde,Marca Beta,Copos,"1.430,00",Faturado
+25/09/2026,Loja Exemplo Praça,Marca Beta,Potes,"620,00",Faturado
+26/09/2026,Loja Exemplo Avenida,Marca Alfa,Facas,"2.100,00",Faturado
+28/09/2026,Loja Exemplo Centro,Marca Alfa,Facas,"1.720,00",Pedido
+29/09/2026,Loja Exemplo Vila Nova,Marca Alfa,Panelas,"450,00",Faturado
+30/09/2026,Loja Exemplo Norte,Marca Alfa,Facas,"780,00",Faturado
+01/10/2026,Loja Exemplo Avenida,Marca Gama,Utensílios,"940,00",Faturado
+03/10/2026,Loja Exemplo Rio Verde,Marca Beta,Potes,"670,00",Faturado
+04/10/2026,Loja Exemplo Norte,Marca Alfa,Panelas,"1.720,00",Pedido
+05/10/2026,Loja Exemplo Avenida,Marca Alfa,Facas,"940,00",Faturado
+06/10/2026,Loja Exemplo Rio Verde,Marca Alfa,Talheres,"940,00",Pedido
+08/10/2026,Loja Exemplo Praça,Marca Gama,Utensílios,"2.650,00",Cotação
+09/10/2026,Loja Exemplo Norte,Marca Alfa,Panelas,"940,00",Orçamento
+10/10/2026,Loja Exemplo Vila Nova,Marca Gama,Assadeiras,"990,00",Orçamento
+12/10/2026,Loja Exemplo Rio Verde,Marca Beta,Copos,"3.250,00",Faturado
+13/10/2026,Loja Exemplo Praça,Marca Alfa,Panelas,"3.290,00",Faturado
+14/10/2026,Loja Exemplo Sul,Marca Alfa,Talheres,"670,00",Orçamento
+15/10/2026,Loja Exemplo Norte,Marca Beta,Potes,"2.100,00",Faturado
+17/10/2026,Loja Exemplo Avenida,Marca Gama,Assadeiras,"2.100,00",Cotação
+18/10/2026,Loja Exemplo Centro,Marca Gama,Assadeiras,"1.380,00",Faturado
+19/10/2026,Loja Exemplo Vila Nova,Marca Beta,Copos,"1.150,00",Cotação
+20/10/2026,Loja Exemplo Sul,Marca Alfa,Talheres,"2.190,00",Faturado
+22/10/2026,Loja Exemplo Sul,Marca Alfa,Panelas,"1.380,00",Orçamento
+23/10/2026,Loja Exemplo Praça,Marca Beta,Potes,"3.200,00",Faturado
+24/10/2026,Loja Exemplo Rio Verde,Marca Gama,Assadeiras,"1.380,00",Faturado
+25/10/2026,Loja Exemplo Vila Nova,Marca Alfa,Talheres,"1.200,00",Faturado
+27/10/2026,Loja Exemplo Avenida,Marca Alfa,Facas,"870,00",Faturado
+28/10/2026,Loja Exemplo Avenida,Marca Alfa,Talheres,"1.240,00",Faturado
+29/10/2026,Loja Exemplo Centro,Marca Alfa,Talheres,"670,00",Faturado
