@@ -69,7 +69,8 @@ python3 scripts/preflight.py --starter-kit starter-kit
 Checklist (um item por vez; se faltar algo, resolva antes de seguir):
 - [ ] Conta no Cloudflare? (plano grátis cobre Pages + Functions + KV; D1 tem free tier). Senão: dash.cloudflare.com.
 - [ ] Node instalado? (`node -v`). Sem Node não roda wrangler nem os testes.
-- [ ] wrangler disponível? `npm i -g wrangler` (3.60+ ou 4.x). Se `wrangler` não for achado depois de
+- [ ] wrangler disponível? Prefira `npx wrangler` (usa a versão mais recente sem instalar; a Cloudflare
+      recomenda instalação local, não global). Se a pessoa quiser global: `npm i -g wrangler` (3.60+ ou 4.x). Se `wrangler` não for achado depois de
       instalar, o bin global do npm não está no PATH (`npm prefix -g` mostra a pasta; adicione ao PATH,
       que é melhor do que apelar pra sudo). O `npm run dev` usa `npx wrangler`, então funciona mesmo sem global.
 - [ ] Login: `wrangler login`. ATENÇÃO: um `CLOUDFLARE_API_TOKEN` exportado no shell SOBREPÕE o login e

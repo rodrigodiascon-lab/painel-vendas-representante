@@ -107,3 +107,22 @@ test('funil: oportunidades -> pedidos (nunca passa de 100%)', () => {
   const out = computeAll(rep.metrics, rows, colMap);
   assert.ok(out.pedidos <= out.oportunidades);
 });
+
+test('grafico e rankings: somam so pedidos validos, sem cotacao nem cancelado', () => {
+  const colMap = { data: 'Data', cliente: 'Cliente', representada: 'Rep', produto: 'Linha', valor: 'Valor', status: 'Status' };
+  const rows = [
+    { Data: '01/08/2026', Cliente: 'A', Rep: 'X', Linha: 'L1', Valor: '100,00', Status: 'Faturado' },
+    { Data: '02/08/2026', Cliente: 'A', Rep: 'X', Linha: 'L1', Valor: '50,00', Status: 'Orçamento' },
+    { Data: '03/08/2026', Cliente: 'B', Rep: 'Y', Linha: 'L2', Valor: '70,00', Status: 'Cancelado' },
+  ];
+  const linhas = rep.chartRows(rows, colMap);
+  assert.equal(linhas.length, 1);
+  assert.equal(linhas[0].Status, 'Faturado');
+});
+
+test('layout: mostra cotacoes em aberto como KPI (conversao no funil) e rankings em reais', () => {
+  const kpis = rep.layout.filter((i) => i.widget === 'kpi').map((i) => i.props.metricKey);
+  assert.ok(kpis.includes('cotacoes_abertas'));
+  assert.equal(kpis.length, 6);
+  for (const r of rep.layout.filter((i) => i.widget === 'ranking')) assert.equal(r.props.format, 'currency');
+});

@@ -54,6 +54,13 @@ function bucketAggFor(template, findMetricDef, valueSlot) {
   return BUCKET_AGGS.has(agg) ? agg : 'sum';
 }
 
+// Linhas usadas por grafico e ranking. Um template pode restringir (ex: Representacao
+// soma so pedidos validos, sem cotacao nem cancelado) via template.chartRows(rows, colMap).
+function linhasDoGrafico(template, dataset, colMap) {
+  const rows = (dataset && dataset.rows) || [];
+  return template && typeof template.chartRows === 'function' ? template.chartRows(rows, colMap) : rows;
+}
+
 export const registry = {
   // kpi: agrupado no dashboard.js (bloco 'kpis'); nunca renderiza como single.
   kpi: {
@@ -73,7 +80,7 @@ export const registry = {
       // Agregacao por dia deriva do `agg` da MetricDef do valueSlot (ex: 'avg'
       // para CSAT/tempo), com fallback seguro pra 'sum' quando nao ha MetricDef.
       const agg = bucketAggFor(template, findMetricDef, props.valueSlot);
-      const points = timeSeries(dataset.rows, colMap, props.dateSlot, props.valueSlot, agg);
+      const points = timeSeries(linhasDoGrafico(template, dataset, colMap), colMap, props.dateSlot, props.valueSlot, agg);
       const title = props.title || 'Evolução no tempo';
       return card(null, renderTimeseries({ title }, points), 'chart');
     },
@@ -89,7 +96,7 @@ export const registry = {
       // Agregacao por dimensao deriva do `agg` da MetricDef do valueSlot (ex:
       // 'avg' para CSAT), com fallback seguro pra 'sum' quando nao ha MetricDef.
       const agg = bucketAggFor(template, findMetricDef, props.valueSlot);
-      const items = groupBy(dataset.rows, colMap, props.dimensionSlot, props.valueSlot, agg);
+      const items = groupBy(linhasDoGrafico(template, dataset, colMap), colMap, props.dimensionSlot, props.valueSlot, agg);
       if (!items.length) return '';
       const title = props.title || `Ranking por ${props.dimensionSlot || ''}`.trim();
       // formato herda da MetricDef que casa com o valueSlot, se houver; senao number.

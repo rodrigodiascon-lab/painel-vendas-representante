@@ -26,7 +26,7 @@ Ou rode no terminal:
 git clone https://github.com/rodrigodiascon-lab/painel-vendas-representante ~/.claude/skills/painel-vendas
 ```
 
-Depois feche e abra o Claude.
+Se a skill não aparecer quando você digitar `/`, abra uma sessão nova.
 
 ## Usar
 

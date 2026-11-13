@@ -203,7 +203,10 @@ function renderKpiBlock(items, template, computed, trends = {}, goal = null) {
       );
     })
     .join('');
-  return `<div class="grid kpis">${cards}</div>`;
+  const n = items.length;
+  const cols = n <= 6 ? n : Math.ceil(n / 2);
+  const meio = Math.ceil(n / 2) <= 4 ? Math.ceil(n / 2) : Math.ceil(n / 3);
+  return `<div class="grid kpis" data-kpis="${n}" style="--kpi-cols:${Math.max(cols, 1)};--kpi-meio:${Math.max(meio, 1)}">${cards}</div>`;
 }
 
 // Renderiza um widget "single" (nao-kpi) ja embrulhado num .card, despachando

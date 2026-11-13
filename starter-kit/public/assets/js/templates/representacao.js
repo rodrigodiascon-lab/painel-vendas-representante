@@ -56,6 +56,8 @@ export const template = {
   label: 'Representação comercial',
   primaryMetric: 'faturamento',
   dateSlot: 'data',
+  // Grafico e rankings somam so pedidos validos, como o faturamento.
+  chartRows: (rows, colMap) => pedidosValidos(rows, colMap),
   slots: [
     { key: 'data', label: 'Data', required: true, aliases: ['data', 'dia', 'date', 'data do pedido', 'emissao', 'data de emissao'] },
     { key: 'cliente', label: 'Cliente', required: false, aliases: ['cliente', 'loja', 'comprador', 'razao social', 'cliente final', 'customer'] },
@@ -94,14 +96,16 @@ export const template = {
     { widget: 'kpi', props: { metricKey: 'clientes_positivados' } },
     { widget: 'kpi', props: { metricKey: 'ticket_medio' } },
     { widget: 'kpi', props: { metricKey: 'mix_produtos' } },
+    { widget: 'kpi', props: { metricKey: 'cotacoes_abertas' } },
     { widget: 'timeseries', col: 8, props: { dateSlot: 'data', valueSlot: 'valor', title: 'Vendas no tempo' } },
+    // a conversao (pedidos / oportunidades) aparece no funil; 6 KPIs cabem numa linha no desktop
     { widget: 'funnel', col: 4, props: { title: 'Oportunidades que viraram pedido', steps: [
       { label: 'Oportunidades', metricKey: 'oportunidades' },
       { label: 'Pedidos', metricKey: 'pedidos' },
     ] } },
-    { widget: 'ranking', col: 6, props: { dimensionSlot: 'cliente', valueSlot: 'valor', title: 'Ranking por cliente' } },
-    { widget: 'ranking', col: 6, props: { dimensionSlot: 'representada', valueSlot: 'valor', title: 'Ranking por representada' } },
-    { widget: 'ranking', col: 12, props: { dimensionSlot: 'produto', valueSlot: 'valor', title: 'Ranking por linha' } },
+    { widget: 'ranking', col: 6, props: { dimensionSlot: 'cliente', valueSlot: 'valor', format: 'currency', title: 'Ranking por cliente' } },
+    { widget: 'ranking', col: 6, props: { dimensionSlot: 'representada', valueSlot: 'valor', format: 'currency', title: 'Ranking por representada' } },
+    { widget: 'ranking', col: 12, props: { dimensionSlot: 'produto', valueSlot: 'valor', format: 'currency', title: 'Ranking por linha' } },
     { widget: 'table', col: 12, props: {} },
   ],
 };
